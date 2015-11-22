@@ -1,0 +1,15 @@
+---
+author: admin
+comments: true
+date: 2011-03-17 02:33:03+00:00
+layout: post
+slug: web_proxy
+title: Web代理
+wordpress_id: 79
+categories:
+- Collection
+---
+
+许多免费的代理网站都不稳定，今天发现这个站点（[https://www.proxy-anywhere.com](https://www.proxy-anywhere.com) ） 还不错，虽然是要付费，但是有10分钟的免费试用，不过为了获得google host密码已经足够了！不过只能够试用一次。
+
+另外发现[http://www.heeky.com](http://www.heeky.com)这个代理网站还挺稳定的。

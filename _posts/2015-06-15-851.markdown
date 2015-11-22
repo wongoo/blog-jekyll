@@ -1,0 +1,42 @@
+---
+author: admin
+comments: true
+date: 2015-06-15 03:38:44+00:00
+layout: post
+slug: '851'
+title: TIBCO iProcess Objects Director Configuration
+wordpress_id: 851
+categories:
+- Experience
+tags:
+- director
+- iProcess
+- Tibco
+---
+
+The TIBCO iProcess Objects Director is a standalone program that maintains a list of TIBCO iProcess Objects Servers that are configured in a node cluster. When a client needs access to a TIBCO iProcess Objects Server, it first establishes a connection to the TIBCO iProcess Objects Director. The TIBCO iProcess Objects Director then decides, based on a “pick method,” which TIBCO iProcess Objects Server the client should connect to.
+
+**1.设置DIRECTOR属性**
+/opt/swnod1/util/swadm SET_ATTRIBUTE 1 DIRECTOR 0 BASE_TCP_SERVICE_NAME 28021
+/opt/swnod1/util/swadm SET_ATTRIBUTE 1 DIRECTOR 0 TCP_SERVICE_NAME 1145
+#bpmipe 为 iprocess server 域名
+/opt/swnod1/util/swadm  SET_ATTRIBUTE 1 DIRECTOR 0 IDENTIFY_SPO_MACHINE_BY bpmipe
+
+**2.修改配置**
+/opt/bpm/swnod1/seo/data/swentobjsv.cfg 
+TCPServiceName = 28021
+
+**3.重启IPE**
+su - pro
+cd /opt/swnod1/bin
+./swstop -p
+netstat -anot |grep 5578
+./swstart -p
+
+注意:若$SWDIR/logs/spodirector01.log文件如果有以下错误，需执行4步骤
+17098|EFB7FB90|03/02/2015 10:48:53.893|00000002|ERROR|check_for_spo_server(), failed to find SPO_SERVER
+
+**4.重启DIRECTOR进程**
+$SWDIR\util\swsvrmgr SHUTDOWN MachineID DIRECTOR ProcessInst
+$SWDIR\util\swsvrmgr START MachineID DIRECTOR ProcessInst
+

@@ -1,0 +1,287 @@
+---
+author: admin
+comments: true
+date: 2011-01-07 02:27:42+00:00
+layout: post
+slug: 20_good_web_app
+title: 20个优秀Web应用
+wordpress_id: 53
+categories:
+- Collection
+---
+
+介绍20款优秀的可以替代桌面软件的Web应用软件:
+
+[1. Google Docs](https://www.google.com/accounts/ServiceLogin?service=writely&passive=1209600&continue=http://docs.google.com/&followup=http://docs.google.com/&ltmpl=homepage)
+
+Google Docs是由Google提供的一款免费的在线Offcie套件，可以桌面word，Excel和Powerpoint的大部分功能。
+
+可以替代:
+
+
+
+	
+  * Microsoft Office
+
+	
+  * Open Office
+
+
+[2. Meebo](http://www.meebo.com/messenger)
+
+Meebo是一个用Ajax编写的网上即时通讯软件，并与主要的即时通讯 软件，如：AOL、ICQ、Yahoo! Messenger、MSN Messenger、Jabber及Google  Talk兼容的系统，使用户免除安装即时通讯软件之余，就能与其他人保持联系。
+
+可以替代:
+
+
+
+	
+  * Facebook Chat
+
+	
+  * Yahoo Messenger
+
+	
+  * AIM
+
+	
+  * Windows Live Messenger
+
+
+[3. Slide Rocket](http://www.sliderocket.com/)
+
+是一款专注于幻灯片演示文档的Web应用程序。跟 PreZentit,  Preezo等Office2.0惯用的AJAX相比，Sliderocket最大的特色便在于它摒弃了众多竞争对手惯用的AJAX，采用 Adobe  Flex+ASP.NET技术完全架构了这款优秀的App.，华丽的用户界面以及完善的功能设置都让人对此瞠目结舌。
+
+可以替代:
+
+
+
+	
+  * Microsoft PowerPoint
+
+	
+  * OpenOffice Impress
+
+
+[4. Aviary](http://www.aviary.com/)
+
+是集成了一套非常方便的在线应用的网站。其应用主要包括了处理图片和音频的功能
+
+可以替代:
+
+
+
+	
+  * Adobe Photoshop
+
+	
+  * Adobe Illustrator
+
+	
+  * Soundbooth
+
+
+[5. Mint](http://www.mint.com/026d/)
+
+它是一个免费的个人财务在线管理工具。它将帮助你管理你的财务帐目，设置您的预算需求。
+
+可以替代:
+
+
+
+	
+  * Quicken
+
+
+[6. JayCut](http://jaycut.com/)
+
+是一个类似于JumpCut 等的在线媒体混合及视频编辑工具，它提供了无限制的上传空间，用可自行上传图片、视频及音频内容。
+
+可以替代:
+
+
+
+	
+  * Windows Movie Maker
+
+	
+  * Ulead
+
+	
+  * Other Video Editing Software
+
+
+[7. WobZip](http://www.wobzip.org/)
+
+是一款免费在线解压缩工具，WobZip创建的时间已经不短了，而且在国外的名气也很大。
+
+可以替代:
+
+
+
+	
+  * Unzipping Softwares
+
+
+[8. Zamzar](http://zamzar.com/)
+
+可以帮助您转换各种音乐、视频、图像和文档格式，而且转换过程是在线完成的，转换结果将投递到用户设定的邮箱，无需本地运算。
+
+可以替代:
+
+
+
+	
+  * File Conversion Software
+
+
+[9. Hulu](http://www.hulu.com/)
+
+Hulu通过网站的形式将一个无穷无尽的电视节目宝库呈现在了观众的面前，Hulu的在线播放的品质也还不错。它是一个容易上手的视频播放器，操作方式就像录像机一样。网站上功能强劲的搜索引擎可以帮助你找到特定的演员或特定的节目。
+
+可以替代:
+
+
+
+	
+  * TV Tuner Software
+
+
+[10. TokBox](http://me.tokbox.com/)
+
+Tokbox 是一款基于Web平台的视频聊天软件，它提供了一款可内置于Blog的视频聊天Widget工具，与其他的Widget服务一样，只需通过代码调用就可轻松完成整个安装过程。TokBox不仅提供实时聊天功能，而且还提供了视频留言功能。
+
+可以替代:
+
+
+
+	
+  * Video Chat
+
+
+[11. Moof ](http://moof.com/)
+
+Moof是一个在线网络流媒体。这就像把你所有喜爱的音乐集合到一个地方。最大的特点之一是能导出您的iTunes资料库，放入网页，所以你绝不会错过了你喜爱的曲子。
+
+可以替代:
+
+
+
+	
+  * iTunes
+
+	
+  * Music Streaming Software
+
+
+[12. ESET Online Virus Scanner](http://www.eset.com/online-scanner)
+
+是一款**可疑文件分析服务**, 通过各种知名反病毒引擎, 对您所上传的文件进行检测, 以判断文件是否被病毒, 蠕虫, 木马, 以及各类恶意软件感染。
+
+可以替代:
+
+
+
+	
+  * Anti Virus Software
+
+
+[13. Bitlet](http://www.bitlet.org/)
+
+是一个基于web的在线BT下载工具，用户无需本地安装 BT 下载客户端即可直接使用浏览器进行BT 下载。
+
+可以替代:
+
+
+
+	
+  * BitTorrent Client
+
+
+[14. icloud](http://icloud.com/en/)
+
+是来自的瑞典的免费WebOS（网络操作系统），3G免费存储空间，采用 云存储技术，有包括简体中文版在内的多种语言版本，很漂亮的界面，但是速度比较卡。icloud中有文档管理器、音乐播放器、邮件客户端、日历、相册、系 统管理器、控制面板、命令控制台，还有几十种应用程序。
+
+可以替代:
+
+
+
+	
+  * Operating System
+
+
+[15. Splashup](http://splashup.com/)
+
+它的功能相当强大,它是一个基于云端的在线图片处理工具，它也提供了很多在线的图片处理工具，为你在线处理图片提供了相当大的方便。
+
+可以替代:
+
+
+
+	
+  * Image Editing Tool
+
+
+[16. Wufoo](http://wufoo.com/)
+
+是一款相当优秀的数据库制表工具，它允许用户轻松在线创建各式各样的数据表格。
+
+可以替代:
+
+
+
+	
+  * Survey Creating Tool
+
+
+[17. Google Voice](http://www.google.com/googlevoice/about.html)
+
+Google Voice可以使你创造一个独立的电话号码，通过该号码来管理你所有的手机号码、电话号码、语音邮件、短信等等。
+
+可以替代:
+
+
+
+	
+  * Skype
+
+
+[18. movavi](http://online.movavi.com/)
+
+movavi是一个在线视频文件转换器。它支持多种格式。
+
+可以替代:
+
+
+
+	
+  * Videora
+
+	
+  * Xilisoft Video Converter
+
+	
+  * Other Video Converter Tool
+
+
+[19. HootSuite](http://hootsuite.com/)
+
+前身为BrightKit，一个最强强大的基于网页的twitter应用之一，它有一个非常强大的工具集，可让您处理多个帐户，延时发布用ow.ly来压缩URL的twitter信息，这可让您跟踪点击该链接，并把你的Twitter的信息自动分享出去。
+
+可以替代:
+
+
+
+	
+  * Social Network Tool
+
+	
+  * Statistics Tracking Tool
+
+
+[20. Balsamiq](http://balsamiq.com/)
+
+是一款进行网页原型设计的工具，内置很多常用的网页元素，可以让用户很方便地设计页面结构、注释交互关系。与其他原型设计工具不同的是，Balsamiq能够嵌入到Confluence、JIRA或XWiki，方便共享与协同工作。
+
+[
+](http://balsamiq.com/)

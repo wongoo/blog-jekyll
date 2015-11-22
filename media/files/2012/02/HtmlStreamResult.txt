@@ -1,0 +1,80 @@
+/**
+ * Created Date: Aug 26, 2011
+ */
+import java.io.UnsupportedEncodingException;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts2.ServletActionContext;
+
+import com.comwave.twse.webui.filter.WapperedResponse;
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionInvocation;
+import com.opensymphony.xwork2.DefaultActionInvocation;
+import com.opensymphony.xwork2.Result;
+import com.opensymphony.xwork2.util.ValueStack;
+
+/**
+ * @author gelnyang
+ * @version 1.0
+ */
+public class HtmlStreamResult implements Result {
+
+	private static final Log logger = LogFactory.getLog(HtmlStreamResult.class);
+
+	private String encoding = "ISO8859-1";
+
+	private String contentType = "application/ostream";
+
+	public void execute(ActionInvocation invocation) throws Exception {
+		/* wrapper and replace the response object */
+		HttpServletResponse httpResp = (HttpServletResponse) ServletActionContext.getResponse();
+		WapperedResponse wrapper = new WapperedResponse(httpResp);
+		ServletActionContext.setResponse(wrapper);
+
+		/* invoke success result execute */
+		DefaultActionInvocation inv = (DefaultActionInvocation) invocation;
+		String resultCode = inv.getResultCode();
+		inv.setResultCode(Action.SUCCESS);
+		inv.createResult().execute(invocation);
+		inv.setResultCode(resultCode);
+
+		ValueStack stack = invocation.getStack();
+
+		byte[] bytes = wrapper.getResponseData();
+		httpResp.reset();
+
+		String fileName = (String) stack.findValue("fileName");
+		String agent = (String) ServletActionContext.getRequest().getHeader("USER-AGENT");
+		httpResp.setContentType(contentType);
+		httpResp.setHeader("Content-disposition", "attachment; filename=" + encodeFileName(fileName, agent));
+		httpResp.setHeader("Expires", "0");
+		httpResp.setHeader("Cache-Control", "must-revalidate, post-check=0, pre-check=0");
+		httpResp.setHeader("Pragma", "public");
+		httpResp.getOutputStream().write(bytes);
+	}
+
+	public String getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(String contentType) {
+		this.contentType = contentType;
+	}
+
+	public void setEncoding(String encoding) {
+		this.encoding = encoding;
+	}
+
+	private String encodeFileName(String fileName, String browserType) throws UnsupportedEncodingException {
+		if (browserType != null && browserType.contains("Firefox")) {// Firefox žgÓ[Æ÷
+			fileName = "=?UTF-8?B?" + (new String(Base64.encodeBase64(fileName.getBytes("UTF-8")))) + "?=";
+		} else {// IE¼°ÆäËûžgÓ[Æ÷
+			fileName = new String(fileName.getBytes(), encoding);
+		}
+		return fileName;
+	}
+}
