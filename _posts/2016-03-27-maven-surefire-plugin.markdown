@@ -130,8 +130,6 @@ Add @NotThreadSafe annotation to test class:
 
 #Example
 -----------------------------
-##Project POM:
------------------------------
 	<build>
 		<plugins>
 			<plugin>
