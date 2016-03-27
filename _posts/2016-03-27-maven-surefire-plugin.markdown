@@ -24,7 +24,7 @@ It generates reports in two different file formats:
 By default, these files are generated at ${basedir}/target/surefire-reports.
 
 
-#Goals
+#Plguin Goals
 -----------------------------
 The Surefire Plugin has only one goal:
 
@@ -65,7 +65,7 @@ Or, provide the parameter from command line:
 
 	mvn install -DskipTests=true
 
-#Using JUnit Categories
+#Using JUnit Categories to Limit Test Scope
 -----------------------------
 JUnit 4.8 introduced the notion of Categories. You can use JUnit categories by using the groups parameter.
 
@@ -94,7 +94,7 @@ The @Category annotation can also be applied at [class-level].
 
 See [Surefire Junit]
 
-#Parallel
+#Test Parallel
 -----------------------------
 
 Simply, using two parameter to control parallel:
@@ -128,7 +128,27 @@ Add @NotThreadSafe annotation to test class:
 	public class FooTest  {
 	}
 
-#Example
+#Multiple Test JVM Instances
+-----------------------------
+The parameter forkCount defines the maximum number of JVM processes that Surefire will spawn concurrently to execute the tests. 
+
+The parameter reuseForks is used to define whether to terminate the spawned process after one test class and to create a new process for the next test in line (reuseForks=false), or whether to reuse the processes to execute the next tests (reuseForks=true).
+
+With the argLine property, you can specify additional parameters to be passed to the forked JVM process, such as memory settings. 
+
+	<plugins>
+	    <plugin>
+	      <artifactId>maven-surefire-plugin</artifactId>
+	      <version>2.11</version>
+	      <configuration>
+	        <forkCount>3</forkCount>
+	        <reuseForks>true</reuseForks>
+	        <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+	      </configuration>
+	    </plugin>
+	</plugins>
+
+#Configureation Example
 -----------------------------
 	<build>
 		<plugins>
@@ -140,6 +160,9 @@ Add @NotThreadSafe annotation to test class:
 	        		<groups>com.mycompany.BuildTest</groups>
 					<parallel>classes</parallel>
           			<threadCount>10</threadCount>
+			        <forkCount>3</forkCount>
+			        <reuseForks>true</reuseForks>
+			        <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 				</configuration>
 			</plugin>
 		</plugins>
