@@ -1,6 +1,13 @@
 ---
 layout: default
 title: Maven Surefire Plugin
+categories:
+- Knowledge
+- Collection
+tags:
+- maven
+- surefire
+- test
 ---
 #Introduction
 -----------------------------
