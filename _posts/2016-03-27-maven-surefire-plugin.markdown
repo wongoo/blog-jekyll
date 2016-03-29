@@ -1,5 +1,7 @@
 ---
-layout: default
+author: gelnyang
+comments: true
+layout: post
 title: Maven Surefire Plugin
 categories:
 - Knowledge
