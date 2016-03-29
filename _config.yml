@@ -1,7 +1,7 @@
 baseurl: /blog
 permalink: /:year/:month/:day/:title.html
 name: "追逐梦想"
-highlighter: pygments
+highlighter: rouge
 
 author: "gelnyang"
 atom-baseurl: "http://sisopipo.com"

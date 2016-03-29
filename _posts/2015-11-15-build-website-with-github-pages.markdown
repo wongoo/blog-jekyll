@@ -1,6 +1,9 @@
 ---
-layout: default
+layout: post
 title: Build Website with Github Pages
+tags:
+- github
+- blog
 ---
 #{{ page.title }}
 
