@@ -148,7 +148,7 @@ With the argLine property, you can specify additional parameters to be passed to
 	    </plugin>
 	</plugins>
 
-#Configureation Example
+#Configuration Example
 -----------------------------
 	<build>
 		<plugins>
