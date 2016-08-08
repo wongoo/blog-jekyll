@@ -5,39 +5,54 @@ tags:
 - github
 - blog
 ---
-#{{ page.title }}
+# {{ page.title }}
 
-##1. Github Pages Documents：
+## 1. Github Pages Documents：
+
 [GitHub Pages Basics](https://help.github.com/categories/github-pages-basics/)
 
 [How GitHub Pages sites use custom domains](https://help.github.com/articles/about-custom-domains-for-github-pages-sites/)
 ,try to understand how the page is redirected.
 		
-##2. Create the MAIN site repository:
+## 2. Create the MAIN site repository:
 1. create repository: username.github.io
 2. create index page index.html
 3. create file CNAME:
-
-		example.com
+```
+	example.com
+```	
 4. push under branch: master
 5. get ip address:
-
-		ping username.github.io
+```
+    ping username.github.io
+```
 6. configure DNS A record for host "@" and "www":
-
-		主机名	类型	对应值			TTL
-		@		A		103.245.222.133	900	-	
-		www		A		103.245.222.133	900	-
-
+```	
+    主机名	类型	对应值			TTL
+    @		A		103.245.222.133	900	-	
+    www		A		103.245.222.133	900	-
+```
 7. then you can visit: http://example.com
 
 @see [adding a cname file to your repository](https://help.github.com/articles/adding-a-cname-file-to-your-repository/)
 
-##3. Create the BLOG site repository:
+## 3. Create the BLOG site repository:
+
 1. create repository: blog.example.com
+
 2. create index page index.html
+
 3. create file CNAME:example.com
+
 4. push under branch: gh-pages
+
 5. then you can visit: http://example.com/blog
+
+## 4. github markdown syntax
+
+[Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+
+[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
 
 {{ page.date | date_to_string }}
