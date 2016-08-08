@@ -1,0 +1,15 @@
+﻿<div id="duoshuodiv" class="ds-thread" data-thread-key="" data-title="{{ page.title }}" data-url=""></div>
+<script type="text/javascript">
+var dsd = document.getElementById("duoshuodiv");
+var currurl = document.location.href;
+dsd.setAttribute("data-thread-key",currurl.replace(/[\W]/g, ""));
+dsd.setAttribute("data-url",currurl);
+var duoshuoQuery = {short_name:"sisopipo"};
+(function() {
+var ds = document.createElement('script');
+ds.type = 'text/javascript';ds.async = true;
+ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+ds.charset = 'UTF-8';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
