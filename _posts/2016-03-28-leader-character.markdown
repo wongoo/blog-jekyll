@@ -2,6 +2,7 @@
 author: gelnyang
 comments: true
 layout: post
+date: 2016-03-28
 title: 一个优秀领导的特质
 categories:
 - 感悟
@@ -15,3 +16,5 @@ tags:
 * 一个优秀的领导需要能承受巨大的压力和责任，才能在企业遇到困难的时候挺过来；
 * 经验成长不是看工资薪水的涨幅，而是看内心看待事情的深入程度；
 * 领导干部一定要严于要求自己，你不迟到，下属才不会迟到；
+
+{{ page.date | date_to_string }},{{ page.author }}

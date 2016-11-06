@@ -43,4 +43,4 @@ tags:
 * 运维手册：包括系统的启动、关闭、监控、异常处理的方式方法等；
 
 
-{{ page.date }},{{ page.author }}
+{{ page.date | date_to_string }},{{ page.author }}

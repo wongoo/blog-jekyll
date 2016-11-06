@@ -18,4 +18,4 @@ tags:
 
 每每想到是自己的无能造成自己的愤怒，也就不再觉得什么事情是值得愤怒的，完善提高自己才是真谛！
 
-{{ page.date | date_to_string }}
+{{ page.date | date_to_string }},{{ page.author }}

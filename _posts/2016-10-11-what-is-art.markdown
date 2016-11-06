@@ -18,4 +18,4 @@ tags:
 
 当一种思想引起了足够的注意，这种思想的表达方式就可以让人欣赏回味，那就是艺术！ 
 
-{{ page.date | date_to_string }}
+{{ page.date | date_to_string }},{{ page.author }}

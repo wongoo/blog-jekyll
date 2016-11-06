@@ -1,5 +1,6 @@
 ---
 layout: post
+date: 2015-11-15
 title: Build Website with Github Pages
 tags:
 - github
@@ -55,4 +56,4 @@ tags:
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 
-{{ page.date | date_to_string }}
+{{ page.date | date_to_string }},{{ page.author }}

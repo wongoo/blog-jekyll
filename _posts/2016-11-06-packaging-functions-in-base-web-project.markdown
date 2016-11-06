@@ -33,4 +33,4 @@ tags:
 提供系统状态、内存、线程、url映射信息的监控
 
 
-{{ page.date | date_to_string }}
+{{ page.date | date_to_string }},{{ page.author }}

@@ -90,4 +90,4 @@ MVC架构中，控制层controller是没有事务的，如果在controller中调
 
 
 
-{{ page.date | date_to_string }}
+{{ page.date | date_to_string }},{{ page.author }}

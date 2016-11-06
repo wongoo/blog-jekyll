@@ -19,4 +19,4 @@ tags:
 
 4. 臃肿庞大的功能： 需求很复杂，会设计大量的修改，让系统臃肿庞大，增加维护难度。
 
-{{ page.date | date_to_string }}
+{{ page.date | date_to_string }},{{ page.author }}

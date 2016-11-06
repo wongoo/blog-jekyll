@@ -2,6 +2,7 @@
 author: gelnyang
 comments: true
 layout: post
+date: 2016-05-02
 title: 我曲解了百度核心价值观
 categories:
 - 感悟
@@ -34,3 +35,5 @@ tags:
 
 1. [李彦宏解读百度文化：简单可依赖 无公司政治](http://it.sohu.com/20120109/n331544745.shtml)
 2. [百度文化](http://home.baidu.com/about/culture.html)
+
+{{ page.date | date_to_string }},{{ page.author }}
