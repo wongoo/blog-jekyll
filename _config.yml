@@ -1,17 +1,15 @@
-baseurl: 
+baseurl:"http://blog.sisopipo.com" 
 permalink: /:year/:month/:day/:title.html
 name: "望哥的日志"
 highlighter: rouge
-kramdown:
-  input: GFM
-
+#kramdown:
+#  input: GFM
 markdown: redcarpet
 redcarpet:
   extensions: ["tables", "fenced_code_blocks"]
 
 author: "gelnyang"
 atom-baseurl: "http://sisopipo.com"
-disqus: "gopherwood"
 
 navigations:
   - title: Archive
