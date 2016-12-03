@@ -2,6 +2,12 @@ baseurl:
 permalink: /:year/:month/:day/:title.html
 name: "望哥的日志"
 highlighter: rouge
+kramdown:
+  input: GFM
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables", "fenced_code_blocks"]
 
 author: "gelnyang"
 atom-baseurl: "http://sisopipo.com"
