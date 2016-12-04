@@ -1,4 +1,4 @@
-baseurl:"http://blog.sisopipo.com" 
+baseurl: "http://blog.sisopipo.com" 
 permalink: /:year/:month/:day/:title.html
 name: "望哥的日志"
 highlighter: rouge
