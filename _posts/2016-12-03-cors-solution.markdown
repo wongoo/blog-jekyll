@@ -2,7 +2,7 @@
 layout: post
 author: gelnyang
 comments: true
-date: 2016-11-06
+date: 2016-12-03
 title: 如何实现跨域访问
 categories:
 - 经验
@@ -25,7 +25,7 @@ tags:
 
 index.html:
 
-```
+```html
 <html>
  <head><title>index</title>
    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -43,14 +43,15 @@ index.html:
 
 data.txt:
 
-```
+```Pure Data
 DATA OF APPLICATION B
 ```
+
 
 ### 1.2. nginx 配置两个应用访问地址
 nginx.conf配置内容如下：
 
-```
+```Sublime Text Config
 worker_processes  1;
 events {
         worker_connections  1024;
@@ -73,13 +74,14 @@ http {
 }
 ```
 
+
 ### 1.3 测试访问
 
 浏览器访问 http://127.0.0.1:8080/app_a/index.html, 请求request的头部有包含Origin头部，其值为http://127.0.0.1:8080，浏览器会将其和response中的Access-Control-Allow-Origin的头部值进行比较，如果一致，或者Access-Control-Allow-Origin的值为“*”, 则允许访问.
 
 但回复response头部不包含Access-Control-Allow-Origin，则不允许访问，提示报错：
 
-```
+```Pure Data
 XMLHttpRequest cannot load http://127.0.0.1:8081/app_b/data.txt. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://127.0.0.1:8080' is therefore not allowed access. The response had HTTP status code 404.
 ```
 
@@ -87,7 +89,7 @@ XMLHttpRequest cannot load http://127.0.0.1:8081/app_b/data.txt. No 'Access-Cont
 
 修改应用B的配置，在response中增加Access-Control-Allow-Origin头部允许跨域访问：
 
-```
+```Sublime Text Config
 server {
         listen       8081;
         location /
@@ -108,7 +110,7 @@ server {
 
 ngnix增加一个server配置映射8082端口，反向代理应用A和应用B的请求：
 
-```
+```Sublime Text Config
 http {
         server {
                 listen       8080;
@@ -143,9 +145,10 @@ http {
 
 ![CORS Proxy Solution](/media/files/2016/cors_proxy_solution.png "CORS Proxy Solution")
 
+
 ## 参考
 
-1. 《跨域资源共享 CORS 详解》，阮一峰, http://www.ruanyifeng.com/blog/2016/04/cors.html
+* 《跨域资源共享 CORS 详解》，阮一峰, http://www.ruanyifeng.com/blog/2016/04/cors.html
 
 
 
