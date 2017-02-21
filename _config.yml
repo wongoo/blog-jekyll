@@ -2,9 +2,33 @@ baseurl:
 indexurl: http://blog.sisopipo.com
 permalink: /:year/:month/:day/:title.html
 name: "望哥的日志"
-highlighter: rouge
+
+# Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
+gems:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
 
 author: "gelnyang"
 atom-baseurl: "http://sisopipo.com"
