@@ -7,7 +7,8 @@ title: 什么需求变更不可接受
 categories:
 - 管理
 tags:
-- 项目 需求
+- Management
+- Requirement
 ---
 ---
 

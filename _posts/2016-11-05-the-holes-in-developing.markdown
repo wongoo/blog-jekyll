@@ -7,7 +7,7 @@ title: 软件开发中曾经遇到的那些坑
 categories:
 - 经验
 tags:
-- 开发 经验
+- development
 ---
 ---
 

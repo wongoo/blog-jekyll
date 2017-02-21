@@ -7,7 +7,9 @@ title: Spring Cloud Stream Components
 categories:
 - Note
 tags:
-- spring-cloud stream message
+- spring-cloud
+- stream
+- message
 ---
 ---
 

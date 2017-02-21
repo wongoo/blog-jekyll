@@ -7,7 +7,7 @@ title: 什么是艺术
 categories:
 - 感悟
 tags:
-- 感悟
+- Art
 ---
 ---
 # {{ page.title }}

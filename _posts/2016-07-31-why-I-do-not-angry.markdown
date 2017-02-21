@@ -7,7 +7,7 @@ title: 为什么我不会生气?
 categories:
 - 感悟
 tags:
-- 感悟
+- Emotion
 ---
 ---
 # {{ page.title }}
