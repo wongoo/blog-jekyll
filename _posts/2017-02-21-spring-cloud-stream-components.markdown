@@ -143,6 +143,9 @@ public interface DemoRequestGateway {
 
 }
 ```
+
+使用@MessageGateway的同时需使用 @IntegrationComponentScan , Scans for @MessagingGateway on interfaces to create GatewayProxyFactoryBean.
+
 ## 11. 注解 @InboundChannelAdapter
 org.springframework.integration.annotation.InboundChannelAdapter， 注解方法，方法返回Message(或MessageSource)对象或payload。
 注解需指定binding名称，以及Poller信息。
