@@ -64,8 +64,8 @@ org.springframework.cloud.stream.messaging.Processor ， 继承了Source和Sink�
 2) group: Unique name that the binding belongs to (applies to consumers only). Multiple consumers within the same group share the subscription. A null or empty String value indicates an anonymous group that is not shared.
 3) contentType: 消息MIME 
 4) binder: 具体服务提供者名称
-5) consumer: [consumer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_consumer_properties)
-6) producer: [producer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_producer_properties)
+5) consumer: [consumer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_consumer_properties), [rabbitmq consumer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/html/_rabbitmq_binder.html#_rabbit_consumer_properties)
+6) producer: [producer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_producer_properties), [rabbitmq producer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/html/_rabbitmq_binder.html#_rabbit_producer_properties)
 
 ## 7. binder
 指定消息服务提供者连接信息，具体参考 org.springframework.cloud.stream.config.BinderProperties 属性，例如：
