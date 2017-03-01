@@ -60,12 +60,12 @@ org.springframework.cloud.stream.messaging.Processor ， 继承了Source和Sink�
 
 ## 6. binding
 指定消息通道信息，具体参考 BindingProperties 属性参数，主要有：
-1) destination: 指定具体的通道名称
-2) group: Unique name that the binding belongs to (applies to consumers only). Multiple consumers within the same group share the subscription. A null or empty String value indicates an anonymous group that is not shared.
-3) contentType: 消息MIME 
-4) binder: 具体服务提供者名称
-5) consumer: [consumer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_consumer_properties), [rabbitmq consumer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/html/_rabbitmq_binder.html#_rabbit_consumer_properties)
-6) producer: [producer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_producer_properties), [rabbitmq producer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/html/_rabbitmq_binder.html#_rabbit_producer_properties)
+* destination: 指定具体的通道名称
+* group: Rabbitmq中最终的queue的名称为 "destination.group", 相同的group名称相当于多个consumer监听同一个queue（一个消息只有一个consumer会收到处理），不同的group名称则多个consumer监听不同的queue（未配置route key的情况一个消息多个consumer都会收到）. 如果未配置或为空值，则未匿名模式，group将被动态赋予一个随机值，故最终的queue名称也会不一致，一个消息会被发送给多个consumer处理。
+* contentType: 消息MIME 
+* binder: 具体服务提供者名称
+* consumer: [consumer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_consumer_properties), [rabbitmq consumer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/html/_rabbitmq_binder.html#_rabbit_consumer_properties)
+* producer: [producer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_producer_properties), [rabbitmq producer properties](http://docs.spring.io/spring-cloud-stream/docs/current/reference/html/_rabbitmq_binder.html#_rabbit_producer_properties)
 
 ## 7. binder
 指定消息服务提供者连接信息，具体参考 org.springframework.cloud.stream.config.BinderProperties 属性，例如：
@@ -121,10 +121,10 @@ spring:
 
 ## 9. 注解 @Gateway
 org.springframework.integration.annotation.Gateway,注解一个方法，注解的方法可用于发送消息。注解配置属性：
-1) requestChannel
-2) replyChannel
-3) requestTimeout
-4) replyTimeout
+* requestChannel
+* replyChannel
+* requestTimeout
+* replyTimeout
 
 注解的方法接收Message对象或payload对象，可以通过@Header或@Headers注解传递头部信息。
 
@@ -206,13 +206,13 @@ public class TransformProcessor {
 ```
 
 ## 15. Other Tips
-1) [Content Type and Message Converter](
+* [Content Type and Message Converter](
 http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#contenttypemanagement)
-2) [Customizing message conversion](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_customizing_message_conversion)
-3) [Schema-based message converters](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_schema_based_message_converters)
-4) [Schema Registry Support](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_schema_registry_support)
-5) [Partitioning](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_partitioning)
-6) [Testing](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_testing)
+* [Customizing message conversion](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_customizing_message_conversion)
+* [Schema-based message converters](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_schema_based_message_converters)
+* [Schema Registry Support](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_schema_registry_support)
+* [Partitioning](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_partitioning)
+* [Testing](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_testing)
 
 {{ page.date | date_to_string }},{{ page.author }}
 
