@@ -3,18 +3,18 @@ layout: post
 author: gelnyang
 comments: true
 date: 2017-02-21
-title: Spring Cloud Stream Components
+title: Spring Cloud Stream Messaging Annotations
 categories:
 - Note
 tags:
 - spring-cloud
 - stream
-- message
+- messaging
+- annotation
 ---
 ---
 
-
-参考：http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/
+Spring Cloud Stream Messaging 使用了一系列注解来实现相关功能,以下列举常用的注解，理解这些注解即可熟练使用其强大的功能：
 
 ## 1. 注解 @Output
 注解接口方法，指定发布消息通道MessageChannel，例如：
@@ -38,7 +38,7 @@ For each bound interface, Spring Cloud Stream will generate a bean that implemen
 public interface MessageSink {
     String MESSAGE_SINK = "message-sink";
 
-    @Output(MESSAGE_SINK)
+    @Input(MESSAGE_SINK)
     SubscribableChannel messageSink();
 }
 ```
@@ -214,5 +214,7 @@ http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#con
 * [Partitioning](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_partitioning)
 * [Testing](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/#_testing)
 
+## 16. Reference
+ [spring cloud stream reference](http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/)
 {{ page.date | date_to_string }},{{ page.author }}
 
