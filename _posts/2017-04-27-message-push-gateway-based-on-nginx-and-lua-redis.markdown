@@ -18,6 +18,10 @@ tags:
 A gateway is needed for client to push message into redis, the article describe the steps 
 to build the gateway based on nginx+lua+redis.
 
+Message are dispatched by channel and pushed into different redis lists, 
+and at the mean while, a event message will be pushed into the event list, 
+so that the server know which channel comes new messages.
+
 ## 1. lua-nginx-module
 
 [ngx_http_lua_module](https://github.com/openresty/lua-nginx-module) - Embed the power of Lua into Nginx HTTP Servers.
