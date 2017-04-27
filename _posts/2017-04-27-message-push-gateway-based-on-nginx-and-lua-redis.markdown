@@ -175,7 +175,7 @@ red:set_timeout(1000)
 ok, err = red:multi()
 if not ok then
     if string.find(err, "AUTH", 1, true) then
-        ok, err = red:auth("redis_SOUND318")
+        ok, err = red:auth("MYPASSWORD")
         if not ok then
             error(self, "failed to auth: ", err)
             return
@@ -194,7 +194,7 @@ end
 local timestamp = (ngx.now() * 1000)
 local sid = ngx.var.request_id
 red:lpush(channel,  timestamp.. "|" .. sid .. "|" .. data)
-red:lpush("im_message_event", channel)
+red:lpush("message_gateway_event", channel)
 
 ok, err = red:exec()
 if not ok then
