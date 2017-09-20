@@ -43,6 +43,9 @@ navigations:
   - title: About
     class: fa fa-user
     href: /about.html
+  - title: Tech
+    class: fa fa-user
+    href: /tech.html
   - title: Subscribe
     class: fa fa-rss
     href: /atom.xml
