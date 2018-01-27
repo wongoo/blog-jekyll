@@ -46,7 +46,7 @@ time { font-family: #{$time-font} }
 header {
   @include page;
   text-align: justify;
-  margin: 0em auto;
+  margin: 0 auto;
   &:after { content: ''; width: 100%; display: inline-block; }
 
   #header {

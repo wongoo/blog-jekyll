@@ -73,7 +73,7 @@ time {
 header {
   margin: 0 auto;
   text-align: justify;
-  margin: 3em auto; }
+  margin: 0 auto; }
   @media screen and (min-width: 320px) {
     header {
       width: 300px; } }
