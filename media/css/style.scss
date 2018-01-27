@@ -40,7 +40,14 @@ a { text-decoration: none; color: #bb2222; &:hover { color: #dd1144; }; }
 blockquote { background-color: #f8f8f8; padding: 0 1em; border: 1px dashed #eee !important; border-color: #e0e0e0 !important; font-size: 13px; line-height: 1.6; display: block; overflow: auto; }
 pre code { @extend blockquote; }
 code { background-color: #f8f8f8; padding: 2px 5px; border: 1px dashed #e0e0e0; font-family: #{$monospace}; }
-h1, h2 { font-size: 1.4em; }
+h1 {
+  font-size: 1.8em;
+  margin: 5px auto;
+}
+h2 {
+  font-size: 1.6em;
+  margin: 5px auto;
+}
 time { font-family: #{$time-font} }
 
 header {
@@ -161,4 +168,8 @@ footer {
   .like-button, .unlike-button { font-family: "FontAwesome"; padding-right: 5px; }
   .like-button:hover { color: #dd1144; }
   .like-button.liked:hover { color: #999; }
+}
+
+.title {
+    font-size: 36px;
 }

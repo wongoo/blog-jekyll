@@ -64,8 +64,14 @@ code {
   border: 1px dashed #e0e0e0;
   font-family: Fira Mono, monospace; }
 
-h1, h2 {
-  font-size: 1.4em; }
+h1 {
+  font-size: 1.6em;
+  margin: 5px auto;
+}
+h2 {
+  font-size: 1.4em;
+  margin: 5px auto;
+}
 
 time {
   font-family: Ubuntu, monospace; }
@@ -241,4 +247,7 @@ footer {
   .like-wrapper .like-button.liked:hover {
     color: #999; }
 
+.title {
+    font-size: 36px;
+}
 /*# sourceMappingURL=style.css.map */
