@@ -26,7 +26,7 @@ $background-color: #f9f9f9;
   @include min-screen(320px) { width: 300px; }
   @include min-screen(375px) { width: 350px; }
   @include min-screen(414px) { width: 400px; }
-  @include min-screen(800px) { width: 750px; }
+  @include min-screen(900px) { width: 900px; }
 }
 
 * { margin: 0; padding: 0; }
@@ -46,7 +46,7 @@ time { font-family: #{$time-font} }
 header {
   @include page;
   text-align: justify;
-  margin: 3em auto;
+  margin: 0em auto;
   &:after { content: ''; width: 100%; display: inline-block; }
 
   #header {
