@@ -1,6 +1,7 @@
 baseurl: 
 indexurl: http://blog.sisopipo.com
-permalink: /:year/:month/:day/:title.html
+#permalink: /:year/:month/:day/:title.html
+permalink: /:title.html
 name: "望哥的日志"
 
 # Jekyll 3 now only supports Kramdown for Markdown

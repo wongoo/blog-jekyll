@@ -18,7 +18,7 @@ go学习资料索引: https://github.com/Unknwon/go-study-index
 
 ## 2.2 messaging framework
 - Mars: a cross-platform network component developed by WeChat, https://github.com/Tencent/mars
-
+- gRPC: popular RPC framework, https://grpc.io/docs/guides/
 
 # 3. cache
 ## 3.1 caffeine
