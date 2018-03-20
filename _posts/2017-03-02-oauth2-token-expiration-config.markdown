@@ -12,7 +12,7 @@ tags:
 ---
 ---
 
-^ 同事有问到Oauth2 token过期时间多少，查看了一下资料和源码，整理如下。
+同事有问到Oauth2 token过期时间多少，查看了一下资料和源码，整理如下。
 
 应用(client)向Oauth2获取token的时候，会根据各个应用的配置（ClientDetail）设置token的过期时间。
 
@@ -50,6 +50,7 @@ public class DefaultTokenServices implements AuthorizationServerTokenServices, R
 		int validitySeconds = getRefreshTokenValiditySeconds(authentication.getOAuth2Request());
 		String value = UUID.randomUUID().toString();
 		if (validitySeconds > 0) {
+		    // 过期时间 = 当前时间 + 配置值
 			return new DefaultExpiringOAuth2RefreshToken(value, new Date(System.currentTimeMillis()
 					+ (validitySeconds * 1000L)));
 		}
@@ -60,6 +61,7 @@ public class DefaultTokenServices implements AuthorizationServerTokenServices, R
 		DefaultOAuth2AccessToken token = new DefaultOAuth2AccessToken(UUID.randomUUID().toString());
 		int validitySeconds = getAccessTokenValiditySeconds(authentication.getOAuth2Request());
 		if (validitySeconds > 0) {
+		    // 过期时间 = 当前时间 + 配置值
 			token.setExpiration(new Date(System.currentTimeMillis() + (validitySeconds * 1000L)));
 		}
 		token.setRefreshToken(refreshToken);
@@ -79,9 +81,11 @@ public class DefaultTokenServices implements AuthorizationServerTokenServices, R
 			ClientDetails client = clientDetailsService.loadClientByClientId(clientAuth.getClientId());
 			Integer validity = client.getAccessTokenValiditySeconds();
 			if (validity != null) {
+			    // 返回配置值
 				return validity;
 			}
 		}
+		// 返回默认值
 		return accessTokenValiditySeconds;
 	}
 
@@ -96,15 +100,17 @@ public class DefaultTokenServices implements AuthorizationServerTokenServices, R
 			ClientDetails client = clientDetailsService.loadClientByClientId(clientAuth.getClientId());
 			Integer validity = client.getRefreshTokenValiditySeconds();
 			if (validity != null) {
+			    // 返回配置值
 				return validity;
 			}
 		}
+		// 返回默认值
 		return refreshTokenValiditySeconds;
 	}
 
 }
 ```
-access_token_validity和refresh_token_validity均按照秒数进行配置，过期时间为当前时间加速配置秒数值。
+access_token_validity和refresh_token_validity均按照秒数进行配置，过期时间为当前时间加配置秒数值。
 
 - 如果 access_token_validity 为空，则access token 过期时间默认为12小时；
 - 如果 access_token_validity 为0，则access token 永远不会过期；
