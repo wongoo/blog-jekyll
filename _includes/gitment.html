@@ -1,0 +1,14 @@
+<div id="gitment_container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: 'wongoo',
+  repo: 'wongoo.github.io',
+  oauth: {
+    client_id: '2d9d63331c0adf11342f',
+    client_secret: '1aef93fd1152f53fd4fe261a133c3c779043c99d',
+  },
+})
+gitment.render('gitment_container');
+</script>
