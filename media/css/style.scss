@@ -1,16 +1,5 @@
-/*------------------------------------
- * sext-vi
- *
- * @author linghua.zhang@me.com
- * @link http://lhzhang.com/
- * @update 2015-07-24
- *
- * |/ | (~ (~
- * |\.|._)._)
- * --------------------------------- */
-
 @import url(/media/fonts/telex-regular.css);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
+@import url(http://fonts.lug.ustc.edu.cn/css?family=Ubuntu:300);
 @import url(//code.cdn.mozilla.net/fonts/fira.css);
 @import "media-queries";
 
@@ -42,11 +31,11 @@ pre code { @extend blockquote; }
 code { background-color: #f8f8f8; padding: 2px 5px; border: 1px dashed #e0e0e0; font-family: #{$monospace}; }
 h1 {
   font-size: 1.8em;
-  margin: 5px auto;
+  margin: 20px auto 5px auto;
 }
 h2 {
   font-size: 1.6em;
-  margin: 5px auto;
+  margin: 15px auto 5px auto;
 }
 time { font-family: #{$time-font} }
 
