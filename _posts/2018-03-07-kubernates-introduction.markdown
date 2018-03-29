@@ -22,27 +22,26 @@ Kubernetes集群包含有节点代理kubelet和Master组件(APIs, scheduler, etc
 ![](media/files/k8s/kubernetes-architecture.png)
 
 Kubernetes主要由以下几个核心组件组成：
-|---
-|组件|说明
-|-|-
-|etcd|保存了整个集群的状态；所有master的持续状态都存在etcd的一个实例中
-|api-server|提供了资源操作的唯一入口，并提供认证、授权、访问控制、API注册和发现等机制；这个服务试图通过把所有或者大部分的业务逻辑放到部件中从而使其具有CRUD特性。它主要处理REST操作，在etcd中验证更新这些对象（并最终存储）。
-|controller manager|负责维护集群的状态，比如故障检测、自动扩展、滚动更新等；所有其它的集群级别的功能目前都是由控制管理器所负责。例如，端点对象是被端点控制器来创建和更新。这些最终可以被分隔成不同的部件来让它们独自的可插拔。replicationcontroller（PS:官方 英文）是一种建立于简单的 pod API之上的一种机制。
-|scheduler|负责资源的调度，按照预定的调度策略将Pod调度到相应的机器上；
-|kubelet|负责维护容器的生命周期，同时也负责Volume（CVI）和网络（CNI）的管理；负责管理pods和它们上面的容器，images镜像、volumes、etc。
-|Container runtime|负责镜像管理以及Pod和容器的真正运行（CRI）；
-|kube-proxy|负责为Service提供cluster内部的服务发现和负载均衡；每一个节点也运行一个简单的网络代理和负载均衡,https://github.com/kubernetes/kubernetes/wiki/Services-FAQ
+|组件|说明|
+|-----------|-----------|
+|etcd|保存了整个集群的状态；所有master的持续状态都存在etcd的一个实例中|
+|api-server|提供了资源操作的唯一入口，并提供认证、授权、访问控制、API注册和发现等机制；这个服务试图通过把所有或者大部分的业务逻辑放到部件中从而使其具有CRUD特性。它主要处理REST操作，在etcd中验证更新这些对象（并最终存储）。|
+|controller manager|负责维护集群的状态，比如故障检测、自动扩展、滚动更新等；所有其它的集群级别的功能目前都是由控制管理器所负责。例如，端点对象是被端点控制器来创建和更新。这些最终可以被分隔成不同的部件来让它们独自的可插拔。replicationcontroller（PS:官方 英文）是一种建立于简单的 pod API之上的一种机制。|
+|scheduler|负责资源的调度，按照预定的调度策略将Pod调度到相应的机器上；|
+|kubelet|负责维护容器的生命周期，同时也负责Volume（CVI）和网络（CNI）的管理；负责管理pods和它们上面的容器，images镜像、volumes、etc。|
+|Container runtime|负责镜像管理以及Pod和容器的真正运行（CRI）；|
+|kube-proxy|负责为Service提供cluster内部的服务发现和负载均衡；每一个节点也运行一个简单的网络代理和负载均衡,https://github.com/kubernetes/kubernetes/wiki/Services-FAQ |
 
 除了核心组件，还有一些推荐的Add-ons：
-|---
-|组件|说明
-|-|-
-|kube-dns|负责为整个集群提供DNS服务
-|Ingress Controller|为服务提供外网入口
-|Heapster|提供资源监控
-|Dashboard|提供GUI
-|Federation|提供跨可用区的集群
-|Fluentd-elasticsearch|提供集群日志采集、存储与查询
+
+|组件|说明|
+|-----------|-----------|
+|kube-dns|负责为整个集群提供DNS服务|
+|Ingress Controller|为服务提供外网入口|
+|Heapster|提供资源监控|
+|Dashboard|提供GUI|
+|Federation|提供跨可用区的集群|
+|Fluentd-elasticsearch|提供集群日志采集、存储与查询|
 
 ![](media/files/k8s/kubernetes-master.png)
 ![](media/files/k8s/kubernetes-node.png)
