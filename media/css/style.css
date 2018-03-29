@@ -250,4 +250,18 @@ header #header h1{
     font-size:16px;
     margin:0;
 }
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+    width: 100%;
+}
+th td{
+    display: table-cell;
+    word-wrap: break-word;
+    vertical-align: top;
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: #e3e3e3;
+}
 /*# sourceMappingURL=style.css.map */

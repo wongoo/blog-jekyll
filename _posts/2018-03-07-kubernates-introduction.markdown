@@ -22,6 +22,7 @@ Kubernetes集群包含有节点代理kubelet和Master组件(APIs, scheduler, etc
 ![](media/files/k8s/kubernetes-architecture.png)
 
 Kubernetes主要由以下几个核心组件组成：
+
 |组件|说明|
 |-----------|-----------|
 |etcd|保存了整个集群的状态；所有master的持续状态都存在etcd的一个实例中|
