@@ -1,14 +1,21 @@
-<div id="gitment_container"></div>
+<div id="gitment_comment"></div>
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
+var currurl = document.location.href;
+currurl = currurl.replace("http://", "");
+currurl = currurl.replace("blog.sisopipo.com", "");
+currurl = currurl.replace(".html", "");
+currurl = currurl.replace(/[\W]/g, "");
+
 var gitment = new Gitment({
+  id: currurl,
   owner: 'wongoo',
   repo: 'wongoo.github.io',
   oauth: {
-    client_id: '2d9d63331c0adf11342f',
-    client_secret: '1aef93fd1152f53fd4fe261a133c3c779043c99d',
+    client_id: '14406f83fee0aeebb244',
+    client_secret: '0798771f8a34e24d61cb7ada60233dc361a276ab',
   },
 })
-gitment.render('gitment_container');
+gitment.render('gitment_comment');
 </script>
