@@ -139,9 +139,9 @@ create some users for team members so that they can create jenkins project.
 ## 2.5 How to deploy a custom plugin
 
 1. Stop Jenkins
-2. Copy the custom HPI file to $JENKINS_HOME/plugins
+2. Copy the custom HPI file to `$JENKINS_HOME/plugins`
 3. Remove the previously expanded plugin directory
-4. Create an empty file called <plugin>.hpi.pinned - e.g. maven-plugin.hpi.pinned
+4. Create an empty file called `<plugin>.hpi.pinned` - e.g. maven-plugin.hpi.pinned
 5. Start Jenkins
 
 
@@ -151,17 +151,11 @@ create some users for team members so that they can create jenkins project.
 When configing jenkins security incorrectly, you may lose the control of jenkins.
 You can reset jenkins permission as following and config security again.
 
-1. sudo systemctl stop jenkins
-2. rm -rf /var/lib/jenkins/users/*
-3. vi /var/lib/jenkins/config.xml
-
-```
-<useSecurity>false</useSecurity>
-# AND delete authorizationStrategy、securityRealm
-```
-
-4. sudo systemctl start jenkins
-5. config jenkins enable secrity, and assign all permission to authrized user
-6. go to login page to create one user
+1. stop jenkins: `sudo systemctl stop jenkins`
+2. remove old user data: `rm -rf /var/lib/jenkins/users/*`
+3. config /var/lib/jenkins/config.xml , set `<useSecurity>false</useSecurity>` and delete `<authorizationStrategy>、<securityRealm>`
+4. start jenkins: `sudo systemctl start jenkins`
+5. go to login page to create the admin user
+6. at last, config jenkins enable secrity correctly, and assign permissions to authrized user.
 
 {{ page.date | date_to_string }},{{ page.author }}
