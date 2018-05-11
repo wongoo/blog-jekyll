@@ -154,10 +154,12 @@ You can reset jenkins permission as following and config security again.
 1. sudo systemctl stop jenkins
 2. rm -rf /var/lib/jenkins/users/*
 3. vi /var/lib/jenkins/config.xml
+
 ```
 <useSecurity>false</useSecurity>
 # AND delete authorizationStrategy、securityRealm
 ```
+
 4. sudo systemctl start jenkins
 5. config jenkins enable secrity, and assign all permission to authrized user
 6. go to login page to create one user

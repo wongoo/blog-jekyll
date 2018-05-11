@@ -272,4 +272,8 @@ th td{
     border-style: solid;
     border-color: #b3b3b3;
 }
+.post ul li{
+    margin-left: 20px;
+    list-style-type: decimal;
+}
 /*# sourceMappingURL=style.css.map */
