@@ -274,6 +274,10 @@ th td{
 }
 .post ul li{
     margin-left: 20px;
+    list-style-type: circle;
+}
+.post ol li{
+    margin-left: 20px;
     list-style-type: decimal;
 }
 /*# sourceMappingURL=style.css.map */
