@@ -56,11 +56,19 @@ code {
 
 h1 {
   font-size: 1.6em;
-  margin: 5px auto;
+  margin: 40px auto 5px auto;
 }
 h2 {
   font-size: 1.4em;
-  margin: 5px auto;
+  margin: 30px auto 5px auto;
+}
+h3 {
+  font-size: 1.2em;
+  margin: 20px auto 5px auto;
+}
+h4 {
+  font-size: 1.0em;
+  margin: 10px auto 5px auto;
 }
 
 time {
@@ -79,7 +87,7 @@ header {
   @media screen and (min-width: 414px) {
     header {
       width: 400px; } }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 700px) {
     header {
       width: 98%; } }
   header:after {
@@ -115,9 +123,9 @@ header {
   @media screen and (min-width: 414px) {
     #content {
       width: 400px; } }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 700px) {
     #content {
-      width: 900px; } }
+      width: 700px; } }
   #content .main-listing {
     margin-bottom: 2em; }
 
@@ -210,9 +218,9 @@ footer {
   @media screen and (min-width: 414px) {
     footer {
       width: 400px; } }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 700px) {
     footer {
-      width: 900px; } }
+      width: 700px; } }
   footer a, footer header #header h1 a, header #header h1 footer a, footer article .title a, article .title footer a, footer article .meta .tags a, article .meta .tags footer a, footer article .divider a, article .divider footer a {
     color: #cccccc; }
     footer a:hover, footer header #header h1 a:hover, header #header h1 footer a:hover, footer article .meta .tags a:hover, article .meta .tags footer a:hover {

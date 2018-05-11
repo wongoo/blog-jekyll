@@ -115,7 +115,8 @@ public class WebSecurityConfiguration implements ImportAware, BeanClassLoaderAwa
 从下图可以看到前几个configurer都是spring-boot内部提供的配置项，没办法去掉。
 ![](media/files/spring/spring-security-config-analysis/adapter-list.png)
 
-一个经验是：配置spring security最好是基于spring security的的扩展去做，比如ResourceServerConfigurerAdapter，他们已经控制好了相关Order顺序问题。
+一个经验是：配置spring security最好是基于spring security adpater
+扩展去做，比如ResourceServerConfigurerAdapter，他们已经控制好了相关Order顺序问题。
 万一要基于spring security本身机制进行配置，最好先了解一下系统内部其他默认配置的order值，再设置自己的order值。
 
 
@@ -156,7 +157,7 @@ http.sessionManagement().disable()：
 ```
 
 
-第二张方式，加入filter列表，spring security 不会创建也不会使用任何session，但这个设置仅限于spring security，和应用是否使用session无关。
+第二种方式，加入filter列表，spring security 不会创建也不会使用任何session，但这个设置仅限于spring security，和应用是否使用session无关。
 配置stateless的情况下，SessionManagementFilter使用了ChangeSessionIdAuthenticationStrategy策略，主要触发sessionId改变事件。
 ```
 http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)：
