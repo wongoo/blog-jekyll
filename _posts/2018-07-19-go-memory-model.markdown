@@ -200,7 +200,7 @@ func main() {
 - 对c的send又发生在print之前。
 
 如果channel是缓冲的(例如`c = make(chan int, 1)`),则该程序不能保证打印出 "hello, world"，有可能打印空字符串，或者崩溃，或者其他情况。
-> 译注: 打印空字符串笔者理解，但`崩溃`或`其他情况`译注也不清楚如何会发生? 如果你清楚，不吝赐教!
+> 译注: 打印空字符串笔者理解，但`崩溃`或`其他情况`译者也不清楚如何会发生? 如果你清楚，不吝赐教!
 
 
 **对于容量为C的缓冲channel，第k次receive发生在第k+C次send完成之前。**
@@ -410,6 +410,9 @@ func main() {
 - 深入理解 Go Channel, http://legendtkl.com/2017/07/30/understanding-golang-channel/
 - Go Channel 源码剖析，http://legendtkl.com/2017/08/06/golang-channel-implement/
 - Golang 内存管理, http://legendtkl.com/2017/04/02/golang-alloc/
+
+# 7. 留言讨论
+[留言讨论地址](https://github.com/wongoo/wongoo.github.io/issues/8)
 
 
 {{ page.date | date_to_string }},{{ page.author }}
