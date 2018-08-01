@@ -6,7 +6,8 @@ title: Go内存模型
 categories:
 - 翻译
 tags:
-- Go
+- Golang
+- goroutine
 
 ---
 
