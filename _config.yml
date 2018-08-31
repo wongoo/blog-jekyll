@@ -1,18 +1,26 @@
 baseurl: 
-indexurl: http://blog.sisopipo.com
+indexurl: https://blog.sisopipo.com
 #permalink: /:year/:month/:day/:title.html
 permalink: /:title.html
 name: "望哥的日志"
+
+markdown: KramdownPygments
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
+  default_lang: java
   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
 
 # Set the Sass partials directory, as we're using @imports
 sass:
@@ -32,7 +40,7 @@ exclude:
   - CNAME
 
 author: "gelnyang"
-atom-baseurl: "http://sisopipo.com"
+atom-baseurl: "https://blog.sisopipo.com"
 
 navigations:
   - title: Archive
