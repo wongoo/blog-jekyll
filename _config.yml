@@ -4,7 +4,8 @@ indexurl: https://blog.sisopipo.com
 permalink: /:title.html
 name: "望哥的日志"
 
-markdown: KramdownPygments
+# dramdown : https://kramdown.gettalong.org/quickref.html
+markdown: Kramdown
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
