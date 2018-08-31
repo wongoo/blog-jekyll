@@ -42,7 +42,6 @@ tags:
 ## 2.1 方法区(Method Area)
 
 - 多线程共享；
-- JVM规范中定义的一个概念；
 - 存储class结构信息(版本、字段、方法、接口、class文件常量池、静态变量、JIT处理后的数据等)。
 - class文件常量池存放两大类常量：字面量(Literal)和符号引用量(Symbolic References)
 

@@ -273,8 +273,9 @@ th td{
     border-color: #b3b3b3;
 }
 .post ul li{
+    line-height: 1.5em;
     margin-left: 20px;
-    list-style-type: circle;
+    list-style-type:initial;
 }
 .post ol li{
     margin-left: 20px;
